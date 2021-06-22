@@ -1,17 +1,17 @@
 import React from 'react';
-import './NavBar.css';
+import '../../index.css'
 import CartWidget from './CartWidget/CartWidget';
 import logo from '../../assets/imgs/logo_la_jugueria.svg';
 
 function NavBar() {
   return (
-    <nav className="NavBar flex justify-between items-center h-130 bg-orange-500 text-black relative shadow-sm">
+    <nav className="NavBar flex justify-between items-center h-130 text-black relative">
      
       <div>
         <img alt="logo de la empresa" className="logo" src={logo} />
       </div>
 
-      <div className="ml-20 font-bold italic">
+      <div className="ml-20 font-bold">
         <h1>La Jugueria</h1>
       </div>
 

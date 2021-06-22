@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+/* import { shopping-cart } from '@heroicons/react/outline/ShoppingCartIcon.d.ts'; */
 
 class CartWidget extends Component {
   render() {
     return (
       <div>
+        {/* <shopping-cart className="h-10 w-10 text-green-500" /> */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-10 w-10"

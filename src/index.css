@@ -1,9 +1,39 @@
 @tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-2xl text-purple-900;
+  }
+}
+
 @tailwind components;
+
 @tailwind utilities;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  .logo {
+    width: 350px;
+    height: 125px;
+    float: left;
+  }
+
+  .btn {
+    @apply py-2 px-4 rounded;
+  }
+
+  .btn-green {
+    @apply bg-green-400 text-purple-900;
+  }
+
+  .btn-green:hover {
+    @apply bg-green-500;
+  }
+
+  .btn-gray {
+    @apply bg-gray-400;
   }
