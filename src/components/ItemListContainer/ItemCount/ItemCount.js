@@ -3,20 +3,20 @@ import React, { useState } from 'react'
 const ItemCount = ({initial, stock, onAdd}) => {
   //console.log(initial, stock, onAdd)
 
-  const [items, setItems] = useState(initial)
+  const [item, setItem] = useState(initial)
 
-  const addItems = () => {
-    items < stock ? setItems(items + 1) : alert('el stock se ha agotado')
+  const addItem = () => {
+    item < stock && setItem(item + 1); //alert('el stock se ha agotado')
   }
 
-  const removeItems = () => {
-    items >= stock ? setItems(items - 1) : alert('no puedes eliminar mas productos del stock')
+  const removeItem = () => {
+    item > 0 && setItem(item - 1); //alert('no puedes eliminar mas productos del stock')
   }
 
   return (
     <div className="my-4">
       <div className="flex m-2 items-center justify-center">
-        <i className="btn btn-green cursor-pointer" onClick={removeItems}>
+        <i className="btn btn-green cursor-pointer" onClick={removeItem}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -32,8 +32,8 @@ const ItemCount = ({initial, stock, onAdd}) => {
             />
           </svg>
         </i>
-        <span className="m-6">{items}</span>
-        <i className="btn btn-green cursor-pointer" onClick={addItems}>
+        <span className="m-6">{item}</span>
+        <i className="btn btn-green cursor-pointer" onClick={addItem}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -52,7 +52,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
       </div>
 
       <div className="flex m-2 items-center justify-center ">
-        <button className="btn btn-green btn-green-hover" onClick={() => onAdd(items)}>
+        <button className="btn btn-green btn-green-hover" onClick={() => onAdd(item)}>
           Agregar al carrito
         </button>
       </div>
