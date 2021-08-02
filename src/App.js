@@ -9,7 +9,6 @@ import ItemListContainer from './components/ItemListContainer';
      // <ItemListContainer name={mensaje} />
 import {BrowserRouter,Switch,Route} from 'react-router-dom';
 import Cart from './components/Cart';
-
 const mensaje = "Bienvenido a tu tienda online líder en frutos secos";
 
 
