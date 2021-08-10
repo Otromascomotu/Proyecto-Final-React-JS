@@ -16,34 +16,21 @@ const {categoryid}=useParams(null);
     let ListTemplate;
     console.log("categoryid"+categoryid);
 
-
-
-
-
     if (!categoryid) {
 
     console.log("In the function dude");
       ListTemplate = items.map(item=><Item key={item.id} jsonpack={item} />);
 
-
     }
-else {
+    else {
     console.log(categoryid);
     ListTemplate=items.filter(item=>item.categoryid==categoryid).map(filteredName=>(<Item key={filteredName.id} jsonpack={filteredName}/>));
-
-
 }
-
-
-
-
-
 
     return (
         <>
         {ListTemplate}
         </>
-
     )
 }
 

@@ -6,11 +6,6 @@ import ItemCount from './ItemCount';
 export const ItemDetail =({jsonpack})=>{
 
 
-
-
-
-
-
 if(jsonpack){
     return(
       <>

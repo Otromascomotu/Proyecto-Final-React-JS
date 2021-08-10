@@ -16,21 +16,20 @@ const[cat,setCat]=useState(categoryid);
     useEffect(()=>{
         const db=getFirestore();
         const itemCollection=db.collection("items");
-console.log("categoryid en ItemListContainer"+categoryid)
-if(categoryid)
+        console.log("categoryid en ItemListContainer"+categoryid)
+        if(categoryid)
         {
         const highprice=db.collection("items").where('categoryid','==',categoryid);
         highprice.get().then((querySnapshot)=>{
       if(querySnapshot.sise===0)
             {
-console.log("No results!");
+        console.log("No results!");
             }
             setItems(querySnapshot.docs.map(doc=>doc.data()));
         }).catch((error)=>{
             console.log("Error searching items",error);
         }).finally(()=>{
         });
-
 
         }
 
@@ -38,7 +37,7 @@ console.log("No results!");
         itemCollection.get().then((querySnapshot)=>{
       if(querySnapshot.sise===0)
             {
-console.log("No results!");
+        console.log("No results!");
             }
             setItems(querySnapshot.docs.map(doc=>doc.data()));
         }).catch((error)=>{
@@ -46,15 +45,9 @@ console.log("No results!");
         }).finally(()=>{
         });
 
-
         }
 
     },[]);
-
-
-
-
-
 
              console.log(cat);
 
@@ -64,15 +57,9 @@ console.log("No results!");
     <div class="p-3 mb-2 bg-dark text-white">
         {name}
 
-
-
         <ItemList items={item}/>
 
-
-
        </div>
-
-
 
            </div>
    )
