@@ -1,24 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
-import $ from 'jquery';
-import Popper from 'popper.js';
-import {CartProvider} from './components/CartContext';
-
-
+import React from "react";
+import ReactDOM from "react-dom";
+import reportWebVitals from "./reportWebVitals";
+import App from "./App";
+import "./index.css";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
+import { CartProvider } from "./components/CartContext";
 
 ReactDOM.render(
   <React.StrictMode>
-<CartProvider>
-    <App />
-</CartProvider>
-          </React.StrictMode>,
-  document.getElementById('root')
+    <CartProvider>
+      <App />
+    </CartProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
